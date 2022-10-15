@@ -14,7 +14,7 @@ def ni_calculator(masa, srednica, czas_sredni, objetosc):
 
     all_ni = []
     for i in range(6):
-        wynik = ( (masa[i] - (pi * ro * math.pow(srednica[i],3) )/6 ) * g * czas_sredni[i] ) / ( 3 * pi * l * srednica[i] * ( 1 + (srednica[i] / D * 2.4 ) ) )
+        wynik = ( (masa[i] - ( ( pi * ro * math.pow(srednica[i],3) ) / 6 ) ) * g * czas_sredni[i] ) / ( 3 * pi * l * srednica[i] * ( 1 + (srednica[i] * 2.4 / D ) ) )
         all_ni.append(wynik)
     print(all_ni)
 
