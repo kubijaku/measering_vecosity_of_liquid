@@ -17,6 +17,7 @@ def ni_calculator(masa, srednica, czas_sredni, objetosc):
         wynik = ( (masa[i] - ( ( pi * ro * math.pow(srednica[i],3) ) / 6 ) ) * g * czas_sredni[i] ) / ( 3 * pi * l * srednica[i] * ( 1 + (srednica[i] * 2.4 / D ) ) )
         all_ni.append(wynik)
     print(all_ni)
+    return all_ni
 
 
 
@@ -37,6 +38,9 @@ if __name__ == '__main__':
     czas_sr = [4.98, 7.41, 7.76, 4.89, 4.92, 7.73]
     objetosc = obj(srednica)
     ni_calculator(masa,srednica,czas_sr,objetosc)
+
+    all_eta =     ni_calculator(masa,srednica,czas_sr,objetosc)
+    print(sum(all_eta) / len(all_eta))
 
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
